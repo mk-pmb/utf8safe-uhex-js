@@ -5,8 +5,11 @@ utf8safe-uhex
 <!--/#echo -->
 
 <!--#echo json="package.json" key="description" -->
-Hex-escape (\uHHHH) those UCS-2 characters that cannot be encoded as UTF-8.
+Hex-escape (\uHHHH) those UCS-2 characters that cannot be encoded as UTF-8,
+and the replacement character, to help you distinguish verbatim occurrences
+from freshly discarded data.
 <!--/#echo -->
+
 
 
 Usage

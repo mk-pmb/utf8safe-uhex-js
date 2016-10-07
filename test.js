@@ -5,8 +5,10 @@
 
 var dog = '\uD83D\uDC15', cow = '\uD83D\uDC04', excl = '\u2757',
   ogco = dog[1] + cow[0],
+  fcc = String.fromCharCode,
   yeahRight = 'Hind of ' + dog + ' + head of ' + cow + ' = ' + ogco + excl,
   uhex = require('utf8safe-uhex'), eq = require('assert').deepStrictEqual;
+
 
 eq(uhex(yeahRight), "Hind of 🐕 + head of 🐄 = \\uDC15\\uD83D❗");
 
@@ -21,6 +23,15 @@ function noSpace(s) { return s.replace(/\s+/g, ''); }
   expectStrictEqual(actual, expect);
   //#-
 }(eq));
+
+
+// test protection against false positives:
+eq(uhex(fcc(0xFFFC,          0xFFFD,       0xFFFE, 0xFFFF)),
+        fcc(0xFFFC) + '\\u' + 'FFFD' + fcc(0xFFFE, 0xFFFF));
+
+
+
+
 
 
 console.log('+OK test passed');
