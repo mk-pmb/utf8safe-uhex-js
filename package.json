@@ -1,0 +1,37 @@
+{ "name": "utf8safe-uhex",
+  "version": "1.0.0",
+  "description": "Hex-escape (\\uHHHH) those UCS-2 characters that cannot be encoded as UTF-8.",
+  "keywords": [
+    "charset",
+    "hex",
+    "string",
+    "UCS-2",
+    "unicode",
+    "UTF-8"
+  ],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/utf8safe-uhex-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/utf8safe-uhex-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/utf8safe-uhex-js/issues"
+  },
+
+  "private": false, "license": "ISC",
+
+  "main": "utf8safe-uhex.js",
+  "scripts": { "test": "nodejs test.js" },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+
+  "dependencies": {},
+  "devDependencies": { "js-stringify": "^1.0.2" },
+
+
+  "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"
+}
